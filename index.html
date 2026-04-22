@@ -3,91 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Ridwan & Ahda</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<title>Ridwan & Ahda Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#f8f6f3;color:#333;scroll-behavior:smooth}
+body{margin:0;font-family:'Patrick Hand',cursive;background:#fff;color:#b30000;overflow-x:hidden}
 section{padding:80px 20px;text-align:center}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(to bottom,#fff,#efeae4)}
-.hero h1{font-family:'Playfair Display',serif;font-size:42px;margin:0}
-.button{margin-top:20px;padding:12px 25px;background:#c8a97e;color:#fff;border:none;border-radius:30px;cursor:pointer}
-.countdown{font-size:24px;margin-top:20px}
-.gallery img{width:30%;margin:5px;border-radius:15px;transition:0.3s}
-.gallery img:hover{transform:scale(1.05)}
-.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05);margin:10px}
-input,textarea{width:80%;padding:10px;margin:5px;border-radius:8px;border:1px solid #ddd}
-.music-btn{position:fixed;bottom:20px;right:20px;background:#c8a97e;color:#fff;border:none;border-radius:50%;width:50px;height:50px;cursor:pointer}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero img{width:220px;border-radius:20px;opacity:0}
+.hero h1,.hero h2{opacity:0}
+.btn{margin-top:20px;padding:12px 25px;border:2px solid #b30000;background:none;color:#b30000;border-radius:30px}
+.card{border:2px dashed #b30000;padding:20px;border-radius:20px;margin:20px}
+.story{display:flex;flex-direction:column;gap:60px}
+.story img{width:80%;max-width:350px;border:3px solid #b30000;border-radius:15px}
+.swiper{width:90%}
+.swiper-slide img{width:100%;border:3px solid #b30000;border-radius:15px}
+.music-btn{position:fixed;bottom:20px;right:20px;background:#b30000;color:#fff;border:none;border-radius:50%;width:50px;height:50px}
 </style>
 </head>
 <body>
 
+<!-- HERO CINEMATIC -->
 <section class="hero">
-  <h1>Ridwan & Ahda</h1>
-  <p>02 Agustus 2026</p>
-  <button class="button" onclick="openInvite()">Buka Undangan</button>
+<img id="heroImg" src="foto1.jpg">
+<h1 id="title">THESE KIDS ARE GETTING MARRIED</h1>
+<h2 id="names">Ridwan & Ahda</h2>
+<button class="btn" onclick="openInvite()">Open Invitation</button>
 </section>
 
 <section id="content" style="display:none;">
 
-<section data-aos="fade-up">
-<h2>Assalamu'alaikum</h2>
-<p>Dengan memohon rahmat Allah SWT, kami mengundang Anda</p>
+<!-- STORY MODE -->
+<section class="story">
+<div>
+<img src="foto1.jpg">
+<p>Awal pertemuan yang sederhana</p>
+</div>
+<div>
+<img src="foto2.jpg">
+<p>Bersama melewati waktu</p>
+</div>
+<div>
+<img src="foto3.jpg">
+<p>Hingga akhirnya menuju satu tujuan</p>
+</div>
+<div>
+<img src="foto4.jpg">
+<p>Dan kami memutuskan untuk bersama</p>
+</div>
 </section>
 
-<section data-aos="fade-up" class="card">
-<h2>Ridwan Ardiansyah</h2>
-<p>Putra dari Bapak Susanto & Ibu Siti Sulfiah</p>
-<h2>&</h2>
-<h2>Ahda Silvia Rizqi</h2>
-<p>Putri dari Bapak Solechudin & Ibu Basariyah</p>
+<!-- DETAIL -->
+<section class="card">
+<h2>2 Agustus 2026</h2>
+<p>Akad 08.00 WIB | Resepsi 10.00 WIB</p>
+<a href="https://share.google/IbJXOE1Nc0tVCDqgV">📍 Lokasi</a>
 </section>
 
-<section data-aos="fade-up">
-<h3>Akad: 02 Agustus 2026 - 08.00 WIB</h3>
-<h3>Resepsi: 10.00 WIB</h3>
-<h3>Ngunduh Mantu: 28 September 2026</h3>
-<a href="https://maps.app.goo.gl/oG5cJBKyGKdz7s1Y7" target="_blank">📍 Lihat Lokasi</a>
+<!-- GALLERY SLIDER -->
+<section>
+<h2>Our Moments</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="foto1.jpg"></div>
+<div class="swiper-slide"><img src="foto2.jpg"></div>
+<div class="swiper-slide"><img src="foto3.jpg"></div>
+<div class="swiper-slide"><img src="foto4.jpg"></div>
+</div>
+</div>
 </section>
 
-<section data-aos="zoom-in">
-<h2>Countdown</h2>
-<div class="countdown" id="countdown"></div>
-</section>
-
-<section class="gallery" data-aos="fade-up">
-<h2>Gallery</h2>
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-</section>
-
-<section data-aos="fade-up">
-<h2>Reservation</h2>
-<h2>Guest Book</h2>
-<h2>Please leave your massage below</h2>
-<input type="text" id="name" placeholder="Nama">
+<!-- RSVP -->
+<section class="card">
+<h2>RSVP</h2>
+<input id="name" placeholder="Nama">
 <textarea id="message" placeholder="Ucapan"></textarea>
-<button class="button" onclick="submitRSVP()">Submit Massage</button>
+<button class="btn" onclick="submitRSVP()">Send</button>
 <div id="result"></div>
-</section>
-
-<section data-aos="fade-up" class="card">
-<h2>Wedding Gift</h2>
-<p>BCA 123456789 a.n Ridwan</p>
-<a href="https://wa.me/62" target="_blank">Kirim Bukti via WhatsApp</a>
 </section>
 
 </section>
 
 <button class="music-btn" onclick="toggleMusic()">🎵</button>
 <audio id="music" loop>
-<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
 </audio>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init();
+// HERO CINEMATIC
+gsap.to("#heroImg",{opacity:1,scale:1.1,duration:1});
+gsap.to("#title",{opacity:1,y:-20,duration:1,delay:0.5});
+gsap.to("#names",{opacity:1,y:-10,duration:1,delay:1});
 
 function openInvite(){
  document.querySelector('.hero').style.display='none';
@@ -97,35 +109,21 @@ function openInvite(){
 
 function toggleMusic(){
  var m=document.getElementById('music');
- if(m.paused){m.play()}else{m.pause()}
+ m.paused?m.play():m.pause();
 }
 
-var countDate=new Date("Aug 2, 2026 08:00:00").getTime();
-setInterval(function(){
- var now=new Date().getTime();
- var gap=countDate-now;
- var d=Math.floor(gap/(1000*60*60*24));
- var h=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
- var m=Math.floor((gap%(1000*60*60))/(1000*60));
- var s=Math.floor((gap%(1000*60))/1000);
- document.getElementById('countdown').innerHTML=d+"d "+h+"h "+m+"m "+s+"s";
-},1000);
+// SWIPER
+new Swiper('.swiper',{loop:true,autoplay:{delay:2000}});
 
-// === GOOGLE SHEET INTEGRATION ===
-const scriptURL = "https://script.google.com/macros/s/AKfycbykxOXcpi9u4iCE3wkdD-TTviKvljDRSJBWp3vgVMtmdJTs_AJqrRXetdcG54hSvBY/exec";
-
+// GOOGLE SHEET
+const scriptURL="ISI_URL_WEB_APP_KAMU";
 function submitRSVP(){
  var name=document.getElementById('name').value;
  var msg=document.getElementById('message').value;
-
- fetch(scriptURL, {
-  method:'POST',
-  body: JSON.stringify({name:name,message:msg}),
- })
- .then(res=>{
-  document.getElementById('result').innerHTML += `<p><b>${name}</b>: ${msg}</p>`;
- })
- .catch(err=>alert('Gagal kirim'));
+ fetch(scriptURL,{method:'POST',body:JSON.stringify({name:name,message:msg})})
+ .then(()=>{
+ document.getElementById('result').innerHTML+=`<p><b>${name}</b>: ${msg}</p>`;
+ });
 }
 </script>
 
