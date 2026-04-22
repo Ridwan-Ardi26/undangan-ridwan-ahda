@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Ridwan & Ahda</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#f8f6f3;
+  color:#333;
+}
+section {
+  padding:60px 20px;
+  text-align:center;
+}
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(to bottom, #ffffff, #f1ede7);
+}
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:40px;
+}
+.button {
+  margin-top:20px;
+  padding:12px 25px;
+  background:#c8a97e;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+.countdown {
+  font-size:24px;
+  margin-top:20px;
+}
+.gallery img {
+  width:30%;
+  margin:5px;
+  border-radius:10px;
+}
+input, textarea {
+  width:80%;
+  padding:10px;
+  margin:5px;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>Ridwan & Ahda</h1>
+  <p>2 Agustus 2026</p>
+  <button class="button" onclick="openInvite()">Buka Undangan</button>
+</section>
+
+<section id="content" style="display:none;">
+  <section>
+    <h2>Assalamu'alaikum</h2>
+    <p>Dengan memohon rahmat Allah SWT, kami mengundang Anda untuk menghadiri pernikahan kami</p>
+  </section>
+
+  <section>
+    <h2>Ridwan Ardiansyah</h2>
+    <p>Putra dari Bapak Susanto & Ibu Siti Sulfiah</p>
+    <h2>&</h2>
+    <h2>Ahda Silvia Rizqi</h2>
+    <p>Putri dari Bapak Solechudin & Ibu Basariyah</p>
+  </section>
+
+  <section>
+    <h2>Akad Nikah</h2>
+    <p>2 Agustus 2026 - 08.00 WIB</p>
+    <h2>Resepsi</h2>
+    <p>2 Agustus 2026 - 10.00 WIB</p>
+    <h2>Ngunduh Mantu</h2>
+    <p>28 September 2026</p>
+    <a href="https://share.google/IbJXOE1Nc0tVCDqgV" target="_blank">Lihat Lokasi</a>
+  </section>
+
+  <section>
+    <h2>Countdown</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/300">
+  </section>
+
+  <section>
+    <h2>RSVP & Ucapan</h2>
+    <input type="text" id="name" placeholder="Nama">
+    <textarea id="message" placeholder="Ucapan"></textarea>
+    <button onclick="submitRSVP()">Kirim</button>
+    <div id="result"></div>
+  </section>
+
+  <section>
+    <h2>Wedding Gift</h2>
+    <p>Transfer ke: BCA 123456789 a.n Ridwan</p>
+    <a href="https://wa.me/62" target="_blank">Kirim Bukti via WhatsApp</a>
+  </section>
+
+</section>
+
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function openInvite(){
+  document.querySelector('.hero').style.display='none';
+  document.getElementById('content').style.display='block';
+  document.getElementById('music').play();
+}
+
+var countDate = new Date("Aug 2, 2026 08:00:00").getTime();
+setInterval(function(){
+  var now = new Date().getTime();
+  var gap = countDate - now;
+
+  var d = Math.floor(gap / (1000*60*60*24));
+  var h = Math.floor((gap % (1000*60*60*24)) / (1000*60*60));
+  var m = Math.floor((gap % (1000*60*60)) / (1000*60));
+  var s = Math.floor((gap % (1000*60)) / 1000);
+
+  document.getElementById('countdown').innerHTML = d+"d "+h+"h "+m+"m "+s+"s";
+},1000);
+
+function submitRSVP(){
+  var name = document.getElementById('name').value;
+  var msg = document.getElementById('message').value;
+  document.getElementById('result').innerHTML += `<p><b>${name}</b>: ${msg}</p>`;
+}
+</script>
+
+</body>
+</html>
