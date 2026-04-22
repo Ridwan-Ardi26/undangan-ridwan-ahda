@@ -42,19 +42,19 @@ section{padding:80px 20px;text-align:center}
 <!-- STORY MODE -->
 <section class="story">
 <div>
-<img src="foto1.jpg">
+<img src="WhatsApp Image 2026-04-22 at 22.09.08.jpeg">
 <p>Awal pertemuan yang sederhana</p>
 </div>
 <div>
-<img src="foto2.jpg">
+<img src="WhatsApp Image 2026-04-22 at 22.09.09.jpeg">
 <p>Bersama melewati waktu</p>
 </div>
 <div>
-<img src="foto3.jpg">
+<img src="WhatsApp Image 2026-04-22 at 22.09.10.jpeg">
 <p>Hingga akhirnya menuju satu tujuan</p>
 </div>
 <div>
-<img src="foto4.jpg">
+<img src="WhatsApp Image 2026-04-22 at 22.09.12.jpeg">
 <p>Dan kami memutuskan untuk bersama</p>
 </div>
 </section>
@@ -71,20 +71,20 @@ section{padding:80px 20px;text-align:center}
 <h2>Our Moments</h2>
 <div class="swiper">
 <div class="swiper-wrapper">
-<div class="swiper-slide"><img src="foto1.jpg"></div>
-<div class="swiper-slide"><img src="foto2.jpg"></div>
-<div class="swiper-slide"><img src="foto3.jpg"></div>
-<div class="swiper-slide"><img src="foto4.jpg"></div>
+<div class="swiper-slide"><img src="WhatsApp Image 2026-04-22 at 22.09.08.jpeg"></div>
+<div class="swiper-slide"><img src="WhatsApp Image 2026-04-22 at 22.09.09.jpeg"></div>
+<div class="swiper-slide"><img src="WhatsApp Image 2026-04-22 at 22.09.10.jpeg"></div>
+<div class="swiper-slide"><img src="WhatsApp Image 2026-04-22 at 22.09.12.jpeg"></div>
 </div>
 </div>
 </section>
 
 <!-- RSVP -->
 <section class="card">
-<h2>RSVP</h2>
+<h2>Reservation</h2>
 <input id="name" placeholder="Nama">
 <textarea id="message" placeholder="Ucapan"></textarea>
-<button class="btn" onclick="submitRSVP()">Send</button>
+<button class="btn" onclick="submitReservation()">Submit Massage</button>
 <div id="result"></div>
 </section>
 
@@ -92,7 +92,7 @@ section{padding:80px 20px;text-align:center}
 
 <button class="music-btn" onclick="toggleMusic()">🎵</button>
 <audio id="music" loop>
-<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+<source src="https://youtu.be/loOpxRE6AmE?si=iUWW9eAolvUxa2NI">
 </audio>
 
 <script>
@@ -116,8 +116,8 @@ function toggleMusic(){
 new Swiper('.swiper',{loop:true,autoplay:{delay:2000}});
 
 // GOOGLE SHEET
-const scriptURL="ISI_URL_WEB_APP_KAMU";
-function submitRSVP(){
+const scriptURL="https://script.google.com/macros/s/AKfycbykxOXcpi9u4iCE3wkdD-TTviKvljDRSJBWp3vgVMtmdJTs_AJqrRXetdcG54hSvBY/exec";
+function submitResrvation(){
  var name=document.getElementById('name').value;
  var msg=document.getElementById('message').value;
  fetch(scriptURL,{method:'POST',body:JSON.stringify({name:name,message:msg})})
